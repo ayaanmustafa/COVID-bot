@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="nav">
+	<header>Explore</header>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#instructions">Instructions</a></li>
+			<li><a href="#getstarted">Get Started</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+		</ul>
+	</nav>
+</div>
+
+<section>
+<img id="img1" src="../static/about.jpg" width=50% height=50%>
+<img id="img2" src="../static/first_img.PNG">
+</section>
+
+<section id="about">
+	<header>About</header>
+	<img src="../static/about.PNG" width=80%>
+	<p>
+</section>
+
+<section id="instructions">
+	<header>Intructions</header>
+	<h2>Read this before using the chatbot</h2><!-- /header -->
+	<ul>
+		<li>Don't use slangs</li>
+		<li>This bot has been specifically designed to answer COVID related doubts</li>
+		<li>Try asking questions in the following fields</li>
+		
+				&nbsp General<br>
+				&nbsp Symptom<br>
+				&nbsp Preventive measures<br>
+				&nbsp Misconceptions<br>
+		<li>Asking irrelevant questions will fetch you a unrelated answer/response.</li>
+		<li>Try getting best out of this bot</li>
+		<li>Happy chatting! :)</li>		
+	</ul>
+	<img src="../static/shield.png" id="shield" width="40%">
+</section>
+<section id="getstarted">
+<h1>COVID assistant</h1>
+<div>
+<div id = "chatbox">
+<p class = "botText"><span>Hi! I am ASSN your COVID-Guide</span></p>
+</div>
+<div id = "userInput">
+<input id ="textInput" type ="text" name="msg" placeholder="Message">
+<input id = "buttonInput" type = "submit" value="Send">
+</div>
+<script>
+function getBotResponse(){
+var rawText = $("#textInput").val();
+var userHtml = '<p class = "userText"><span>' + rawText + '</span></p>';
+$("#textInput").val("");
+$("#chatbox").append(userHtml);
+document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+$.get("/get", {msg:rawText }).done(function(data) {
+var botHtml = '<p class ="botText"><span>' + data + '</span></p>';
+$("#chatbox").append(botHtml);
+document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+});
+}
+$("#textInput").keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
+});
+$("#buttonInput").click(function() {
+getBotResponse();
+})
+</script>
+</section>
+<section id="contacts">
+<header>
+	Contacts
+</header><!-- /header -->
+<img src="../static/Contacts.PNG" id="last_image">
+	</section>
+</div>
+</body>
+</html>

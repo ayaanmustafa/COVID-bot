@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: Garamond;
+
+}
+
+.nav{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+}
+
+.nav header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.nav ul a{
+    display: block;
+    height: 100%;
+    list-style: none;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px  solid black;
+
+}
+
+ul li:hover a{
+    padding-left: 50px;
+    transition: 0.3s;
+
+}
+
+section header{
+    text-align: center;
+    font-family: cursive;
+    color: green;
+    font-size: 55px;
+    padding: 3%;
+}
+
+
+section{
+    padding-top: 5%;
+    margin-left: 25%;
+    min-height: 100vh;
+}
+
+#logo{
+    margin-left: -10%;
+}
+
+#img1{
+    margin-top: 3%;
+    margin-left:-5%;
+    border-radius: 360px;
+}
+
+#shield{
+    padding: 25%;
+    margin-left: 5%;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+#chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#last_image{
+    margin-left: 15%;
+}
